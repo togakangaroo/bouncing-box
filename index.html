@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>JS Bin</title>
-  <style>
-    .box {
-      display: block;
-      width: 70px;
-      height: 70px;
-      top: 100px;
-      left: 0px;
-      background-color: teal;
-      position: absolute;
-      font-size: 300%;
-      text-align: center;
-    }
-  </style>
- 
+	<meta charset="utf-8">
+	<title>Bouncing Box</title>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<!-- BEGIN CSS -->
+	<style>
+		/* TODO 1 */
+		.box {
+			display: block;
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			top: 100px;
+			left: 0px;
+			background-color: teal;
+			font-size: 300%;
+			text-align: center;
+		}
+	</style>
+	
+
 </head>
 <body class="board">
-  <div class="box"></div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-   <script type="text/javascript" src="box.js"></script>
+	<!-- HTML for the box -->
+	<div class="box">?</div>
+
+	<!-- BEGIN JAVASCRIPT -->
+	<script>
+		// Variable declarations
+		var box;
+		var boardWidth;
+		var update;
+		var handleBoxClick;
+
+		// jQuery stuff setup for you
+		box = $('.box');
+		boardWidth = $('.board').width();
+
+		// TODO 2
+
+
+		// TODO 3 / 4
+		update = function() {
+		};
+
+		setInterval(update, 50);
+		
+		// TODO 5 / 6
+		handleBoxClick = function() {
+		};
+
+		// this calls the handle handleBoxClick function every time the box is clicked on
+		box.on('click', handleBoxClick);
+	</script>
 </body>
 </html>
