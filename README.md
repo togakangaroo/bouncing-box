@@ -51,7 +51,7 @@ Notice how you can change the appearance of the box using CSS! Now return those 
 
 You can also change the appearance of the box using JavaScript. 
 
-Declare and initalize `position` and `points` variables to zero
+Declare and initialize `position` and `points` variables to zero
 
     // TODO 2
     var position;
@@ -82,7 +82,7 @@ Before we move on, lets reset those variables to their starting values
 
 ### TODO 3: Animating the box
 
-You can create animation on a web page by changing the appearance of an object over time. A traditional animation is made up of indvidual "frames" of still images. If you flip between these images rapidly and each image is just slightly different than the previous image, the viewer sees the scene as motion. We do the same thing in programming. 
+You can create animation on a web page by changing the appearance of an object over time. A traditional animation is made up of individual "frames" of still images. If you flip between these images rapidly and each image is just slightly different than the previous image, the viewer sees the scene as motion. We do the same thing in programming. 
 
 The `setInterval` function allows us to setup a timer, where we call a function every so often. **How often**, the time between function calls, is called the interval. That interval is expressed in milliseconds, or thousandths of a second. 
 
