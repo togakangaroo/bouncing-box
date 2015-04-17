@@ -8,7 +8,7 @@
 	<!-- BEGIN CSS -->
 	<style>
 		/* TODO 1 */
-		.box {
+		[class="box"] {
 			display: block;
 			position: absolute;
 			width: 70px;
@@ -20,7 +20,6 @@
 			text-align: center;
 		}
 	</style>
-	
 
 </head>
 <body class="board">
@@ -29,31 +28,39 @@
 
 	<!-- BEGIN JAVASCRIPT -->
 	<script>
-		// Variable declarations
-		var box;
-		var boardWidth;
-		var update;
-		var handleBoxClick;
+		(function(){
+			'use strict'
 
-		// jQuery stuff setup for you
-		box = $('.box');
-		boardWidth = $('.board').width();
+			// Variable declarations
+			var box;
+			var boardWidth;
+			var update;
+			var handleBoxClick;
 
-		// TODO 2
+			// jQuery stuff setup for you
+			box = $('.box');
+			boardWidth = $('.board').width();
+
+			// TODO 2
 
 
-		// TODO 3 / 4
-		update = function() {
-		};
+			// TODO 3 / 4
+			update = function() {
 
-		setInterval(update, 50);
-		
-		// TODO 5 / 6
-		handleBoxClick = function() {
-		};
+			};
 
-		// this calls the handle handleBoxClick function every time the box is clicked on
-		box.on('click', handleBoxClick);
+
+			// TODO 5 / 6
+			handleBoxClick = function() {
+
+			};
+
+
+			//this calls update every 50 milliseconds
+			setInterval(update, 50);
+			// this calls the handle handleBoxClick function every time the box is clicked on
+			box.on('click', handleBoxClick);
+		})()
 	</script>
 </body>
 </html>
