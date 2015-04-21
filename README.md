@@ -152,6 +152,45 @@ and then add the following code to the `update` function
 
 What's going on here?
 
+### TODO 7: Make It Bounce
+
+So we have the box loop accross the screen, but don't we want it to bounce off of the walls?
+Well, at least we want to make it look that way.
+
+Before we can make it bounce we have to figure out how to make the box move from right to left.
+Right now our motion comes from the following line in the `update` function:
+
+    position = position + speed;
+    
+Since `speed` is positive, `position` keeps getting bigger, so to make the box 
+move the other way we need to subtract the speed instead of adding it.
+To do this we can add a variable `direction` that will tell us 
+whether to add or subract the speed. Let's declare and initialize it up top:
+
+    var direction;
+    direction = 1;
+    
+Now we modify the `update` function to be as follows:
+
+    position = position + (speed * direction);
+    
+When `direction` is set to 1 then this increases the position by `speed`,
+sending the box to the right.  But when `direction` is set to -1,
+the speed is subracted from the position, sending the box to the left.
+
+Lastly, we need to change the bounds-check in the `update` function:
+
+    if(position > boardWidth) {
+        position = 0;
+    }
+    
+so that instead of looping to position 0 we change the direction to -1.
+Do this and confirm that the box bounces off the right wall.
+However, you will need to add another bounds-check (if...) to make the box bounce
+off the left wall.  Do this yourself!
+
+####Hint: At what position value do you want the box to "bounce" off the left wall?
+
 ## Good Job
 
 You've written your first game! Here are some ways you can try and make your game even more awesome.
