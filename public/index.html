@@ -4,63 +4,12 @@
 	<meta charset="utf-8">
 	<title>Bouncing Box</title>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-	<!-- BEGIN CSS -->
-	<style>
-		/* TODO 1 */
-		[class="box"] {
-			display: block;
-			position: absolute;
-			width: 70px;
-			height: 70px;
-			top: 100px;
-			left: 0px;
-			background-color: teal;
-			font-size: 300%;
-			text-align: center;
-		}
-	</style>
-
+	<link rel="stylesheet" href="style.css">
 </head>
 <body class="board">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
 
-	<!-- BEGIN JAVASCRIPT -->
-	<script>
-		(function(){
-			'use strict'
-
-			// Variable declarations
-			var box;
-			var boardWidth;
-			var update;
-			var handleBoxClick;
-
-			// jQuery stuff setup for you
-			box = $('.box');
-			boardWidth = $('.board').width();
-
-			// TODO 2
-
-
-			// TODO 3 / 4
-			update = function() {
-
-			};
-
-
-			// TODO 5 / 6
-			handleBoxClick = function() {
-
-			};
-
-
-			//this calls update every 50 milliseconds
-			setInterval(update, 50);
-			// this calls the handle handleBoxClick function every time the box is clicked on
-			box.on('click', handleBoxClick);
-		}).call()
-	</script>
+	<script src="bouncing-box.js"> </script>
 </body>
 </html>

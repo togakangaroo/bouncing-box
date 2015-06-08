@@ -1,0 +1,12 @@
+/* TODO 1 */
+.box {
+	display: block;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top: 100px;
+	left: 0px;
+	background-color: teal;
+	font-size: 300%;
+	text-align: center;
+}
