@@ -1,0 +1,27 @@
+{
+  "name": "bouncing-box",
+  "version": "1.0.0",
+  "description": "A simple tutorial demonstrating combining HTML, CSS, and Javascript to make a game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/togakangaroo/bouncing-box.git"
+  },
+  "keywords": [
+    "bouncing-box",
+    "tutorial",
+    "lesson"
+  ],
+  "author": "gmauer@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/togakangaroo/bouncing-box/issues"
+  },
+  "homepage": "https://github.com/togakangaroo/bouncing-box#readme",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}

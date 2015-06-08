@@ -1,20 +1,23 @@
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-# Bouncing Box
-
 We're going to create a simple game where a box moves across the screen at an increased speed after each click.
 
 [When you are done it should look like this](http://jsbin.com/toyikozeyi/1)
 
 Our goal for this game is to learn how to bring together HTML, CSS, and JavaScript. We use HTML to define our structure, CSS to define the style of that structure, and JavaScript in order to implement behavior. One of the primary ways we can implement behavior in JavaScript is by making modifications to the HTML and CSS in response to **events** which we will demonstrate by making this simple game. 
 
-## Let's get started
+# Let's get started
 
-* Visit Cloud 9
-* Create an HTML5 workspace
-* Click the 'Start Editing' button
+For this project you will need to clone the template at `https://github.com/togakangaroo/bouncing-box` and a web server to run it. You can do this via a web server installed on your system, something like [mongoose](https://github.com/cesanta/mongoose), or Cloud 9 IDE pointed at the `public` directory. There is also a basic node web server packaged into the application that you can start with
 
-## A note about jQuery
+```bash
+> npm install
+> npm start
+```
+
+And then opening your browser to [http://localhost:8080](http://localhost:8080).
+
+# A note about jQuery
 
 We are going to be using [jQuery](https://jquery.com) for this exercise. You can see that we've included it in our web page with the following HTML 
 
@@ -27,7 +30,7 @@ You can recognize jQuery by its use of a very curious function `$()` Here is som
     box = $('.box');
     boardWidth = $('.board').width();
 
-### TODO 1: Create and Style Box
+## TODO 1: Create and Style Box
 
 The HTML for our box has already been created for us:
 
@@ -49,7 +52,7 @@ Notice how you can change the appearance of the box using CSS! Now return those 
     top: 100px;
     left: 0px;
 
-### TODO 2: Learn how to move the box
+## TODO 2: Learn how to move the box
 
 You can also change the appearance of the box using JavaScript. 
 
@@ -82,7 +85,7 @@ Before we move on, lets reset those variables to their starting values
     points = 0;  
     speed = 10;
 
-### TODO 3: Animating the box
+## TODO 3: Animating the box
 
 You can create animation on a web page by changing the appearance of an object over time. A traditional animation is made up of individual "frames" of still images. If you flip between these images rapidly and each image is just slightly different than the previous image, the viewer sees the scene as motion. We do the same thing in programming. 
 
@@ -103,7 +106,7 @@ To animate the box, add the following code to the update function
 
 This changes our position on every call to `update` and then also moves the box to that position.
 
-### TODO 4: Hey box, come back!
+## TODO 4: Hey box, come back!
 
 Each time we call the `update` function the position variable gets larger and larger until eventually our box has gone off the screen. The position of our box should never be greater than the width of the board. Add the following code **inside** the `update` function
 
@@ -121,7 +124,7 @@ Your `update` function should look like this:
         box.css('left', position);
     };
 
-### TODO 5: Handling events
+## TODO 5: Handling events
 
 An event is just a particular thing that has happened. Some examples of **events** are:
 
@@ -140,7 +143,7 @@ Every time the user clicks the box, we want to reset the box to its starting pos
       position = 0;
     }
 
-### TODO 6: Keeping Score
+## TODO 6: Keeping Score
 
 We want to keep track of how many times the user has clicked on the box. 
 
@@ -154,7 +157,7 @@ and then add the following code to the `update` function
 
 What's going on here?
 
-### TODO 7: Make It Bounce
+## TODO 7: Make It Bounce
 
 So we have the box loop accross the screen, but don't we want it to bounce off of the walls?
 Well, at least we want to make it look that way.
@@ -191,13 +194,13 @@ Do this and confirm that the box bounces off the right wall.
 However, you will need to add another bounds-check (if...) to make the box bounce
 off the left wall.  Do this yourself!
 
-####Hint: At what position value do you want the box to "bounce" off the left wall?
+###Hint: At what position value do you want the box to "bounce" off the left wall?
 
-## Good Job
+# Good Job
 
 You've written your first game! Here are some ways you can try and make your game even more awesome.
 
-### Can you move the box up and down?
-### Can you change the size or color of the box with each click?
-### Use the [background-image](http://www.w3schools.com/cssref/pr_background-image.asp) CSS property to change your box or the background
+## Can you move the box up and down?
+## Can you change the size or color of the box with each click?
+## Use the [background-image](http://www.w3schools.com/cssref/pr_background-image.asp) CSS property to change your box or the background
 
